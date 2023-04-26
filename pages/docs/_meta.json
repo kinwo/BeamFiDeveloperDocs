@@ -1,3 +1,12 @@
 {
-  "index": "Getting Started"
+  "gettingstarted": "Getting Started",
+  "smartcontracts": "Smart Contracts",
+  "architecture": "Architecture",
+  "frontend": "Web Frontend",
+  "sampleapp": "Sample Apps",
+  "deploy": "Deploy",
+  "security": "Security",
+  "monitor": "Monitoring and Metrics",
+  "future": "Future",
+  "references": "References"
 }
