@@ -2,7 +2,7 @@
 
 This is a documentation app based on [Nextra](https://nextra.site).
 
-[**Production →**](https://developer.beamfi.app)
+[**Production →**](https://developer.beamfi.app)  
 [**Beta →**](https://developer-beta.beamfi.app)
 
 ## Local Development
