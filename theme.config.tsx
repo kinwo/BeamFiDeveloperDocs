@@ -76,6 +76,10 @@ const config: DocsThemeConfig = {
     return {
       titleTemplate: "%s – BeamFi"
     }
+  },
+  banner: {
+    key: "workinprogress-release",
+    text: "BeamFi Developer Docs is still work in progress. Please check back later."
   }
 }
 
