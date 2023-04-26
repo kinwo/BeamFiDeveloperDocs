@@ -1,6 +1,6 @@
 # BeamFi Protocol Developer Documentation
 
-This is a BeamFI documentation app based on [Nextra](https://nextra.site).
+This is a BeamFI documentation app powered by [Nextra](https://nextra.site).
 
 [**Production →**](https://developer.beamfi.app)  
 [**Beta →**](https://developer-beta.beamfi.app)
