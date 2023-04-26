@@ -19,8 +19,63 @@ const config: DocsThemeConfig = {
     )
   },
   docsRepositoryBase: "https://github.com/kinwo/BeamFiDeveloperDocs",
+  head: (
+    <>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/apple-touch-icon.png"
+        key="apple-touch-icon"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/favicon-32x32.png"
+        key="icon32"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/favicon-16x16.png"
+        key="icon16"
+      />
+      <meta name="twitter:card" content="Beam" key="twittercard" />
+      <meta name="twitter:site" content="@BeamFiApp" key="twittersite" />
+      <meta name="twitter:creator" content="@BeamFiApp" key="twittercreator" />
+      <meta
+        property="og:url"
+        content="http://developer.beamfi.app"
+        key="ogurl"
+      />
+      <meta property="og:title" content="BeamFi Protocol Developer Docs" />
+      <meta property="og:description" content="Micro Payment Solution" />
+      <meta
+        name="description"
+        content="Micro Payment Solution with money streaming."
+        key="desc"
+      />
+      <meta
+        property="og:image"
+        content="https://contentfly.app/assets/images/beamlogo-og.png"
+        key="ogimage"
+      />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta
+        name="apple-mobile-web-app-status-bar-style"
+        content="black-translucent"
+      />
+    </>
+  ),
   footer: {
     text: "BeamFi Payment Protocol -  Micro Payment Solution"
+  },
+  useNextSeoProps() {
+    return {
+      titleTemplate: "%s – BeamFi"
+    }
   }
 }
 
