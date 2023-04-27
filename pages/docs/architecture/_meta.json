@@ -1,8 +1,8 @@
 {
   "overview": "Overview",
+  "package": "Package Management",
   "model": "Model",
   "service": "Service",
   "remote": "Remote",
-  "test": "Test",
-  "package": "Package Management"
+  "test": "Test"
 }

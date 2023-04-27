@@ -1,7 +1,7 @@
 {
   "index": { "title": "Home", "type": "page" },
   "whatis": { "title": "What is BeamFi?", "type": "page" },
-  "docs": { "title": "Docs", "type": "page" },
+  "docs": { "title": "Documentation", "type": "page" },
   "apidoc": { "title": "API", "type": "page" },
   "email": {
     "title": "Contact",
