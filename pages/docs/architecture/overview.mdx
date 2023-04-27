@@ -16,3 +16,11 @@ BeamFi Architecture Diagram
 Rather than making a payment to the creator's wallet each second (which is costly), the smart contract adjusts the ownership of the funds inside the Canister and unlocks the creator-owned funds for claiming.
 
 Both the buyer and creator can view the live status of the Beam payment through the API as it updates in real-time. Creator can claim fund through API.
+
+## Folder Structure
+
+All backend code is located in the `backend` folder. It contains the following major subfolders:
+
+- `model`: Motoko model types for Beam, BeamOut, Escrow, ICP and persistence store helper.
+- `service`: Motoko Actor Smart Contract where the canister entry point is.
+- `remote`: Motoko modules or Candid did for interacting with remote actor e.g XTC, ICP Ledger

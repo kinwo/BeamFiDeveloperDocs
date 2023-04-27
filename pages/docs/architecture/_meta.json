@@ -3,6 +3,5 @@
   "package": "Package Management",
   "model": "Model",
   "service": "Service",
-  "remote": "Remote",
-  "test": "Test"
+  "remote": "Remote"
 }
