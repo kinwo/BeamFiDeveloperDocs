@@ -27,8 +27,8 @@ func processActiveBeams() : async ()
 
 ### Beam Payment
 
-[Beam streams payment to receipient](https://github.com/BeamFi/BeamFiProtocol/blob/23101f93860397a4360aac7d4a4ac2bcf6e8f32d/backend/service/Beam.mo#L200) over time following `Checks-Effects-Interactions-Rollback` pattern.
-It will calculate the elapsed time since last payment and update the allocations of each party (BeamEscrow, sender, receipient) accordingly.
+[Beam streams payment to recipient](https://github.com/BeamFi/BeamFiProtocol/blob/23101f93860397a4360aac7d4a4ac2bcf6e8f32d/backend/service/Beam.mo#L200) over time following `Checks-Effects-Interactions-Rollback` pattern.
+It will calculate the elapsed time since last payment and update the allocations of each party (BeamEscrow, sender, recipient) accordingly.
 
 One of the reason to follow `Checks-Effects-Interactions-Rollback` pattern is to avoid the reentrancy attack since another party can interact with the Canister actor during its async processing.
 

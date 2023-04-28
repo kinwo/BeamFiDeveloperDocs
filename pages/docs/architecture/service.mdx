@@ -62,7 +62,7 @@ It also exposes HTTPS /metric and /health for monitoring and /zoom for Zoom Even
 
 ## BeamEscrow
 
-[BeamEscrow](https://github.com/BeamFi/BeamFiProtocol/blob/main/backend/service/BeamEscrow.mo) is money keeper in BeamFi. It is where EscrowContract between sender and receipient is stored. It keeps track of the allocation of the token asset owned by each party. Each BeamType has 1:1 relationship with EscrowContract. It ensures the mathematics correctness of the contract everytime when Beam service updates its allocation. It is where self-custoday of the token asset is implemented as this actor will have the direct ownership in the token ledger (ICP / XTC). It is also where the token implementation is abstracted away from the Beam service. It is also responsible for the token transfer to the receipient when the token is claimed.
+[BeamEscrow](https://github.com/BeamFi/BeamFiProtocol/blob/main/backend/service/BeamEscrow.mo) is money keeper in BeamFi. It is where EscrowContract between sender and recipient is stored. It keeps track of the allocation of the token asset owned by each party. Each BeamType has 1:1 relationship with EscrowContract. It ensures the mathematics correctness of the contract everytime when Beam service updates its allocation. It is where self-custoday of the token asset is implemented as this actor will have the direct ownership in the token ledger (ICP / XTC). It is also where the token implementation is abstracted away from the Beam service. It is also responsible for the token transfer to the recipient when the token is claimed.
 
 It implements a various number of measures to ensure the smart contract is safe during creating EscrowContract:
 
