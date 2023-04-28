@@ -17,7 +17,8 @@ public func createBeamOut(amount : TokenAmount, tokenType : TokenType, recipient
   : async Result<BeamOutId, ErrorCode>
 ```
 
-`amount` is E8S format with base of 8 zeros meaning e.g 1 ICP = 100000000 E8S. `tokenType` is either `icp` or `xtc`.
+`amount` is E8S format with base of 8 zeros meaning e.g 1 ICP = 100000000 E8S. For XTC, it is base of 12.
+`tokenType` is either `icp` or `xtc`.
 `recipient` is the Principal ID of the recipient which you can get by creating a new identity running following in cmd line:
 
 ```
