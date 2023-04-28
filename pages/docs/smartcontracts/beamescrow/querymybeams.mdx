@@ -1,6 +1,6 @@
 # Query list of BeamEscrows owned by the caller
 
-After creating BeamEscrow EscrowContract, either the sender or the receipient can lookup the BeamEscrowContracts owned by them.
+After creating BeamEscrow EscrowContract, either the sender or the recipient can lookup the BeamEscrowContracts owned by them.
 
 ```js
 public query ({ caller }) func queryMyBeams() : async [BeamEscrowContract]
@@ -42,9 +42,9 @@ import { Callout } from "nextra-theme-docs"
   BeamEscrowContracts owned by the caller not others.
 </Callout>
 
-If you switch to receipient identity and run the same command, it should return the same BeamEscrowContracts.
+If you switch to recipient identity and run the same command, it should return the same BeamEscrowContracts.
 
 ```bash
-dfx identity use receipient1
+dfx identity use recipient1
 dfx canister call beamescrow queryMyBeams
 ```
