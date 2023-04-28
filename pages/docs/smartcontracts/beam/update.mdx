@@ -1,0 +1,15 @@
+## Stop Beam
+
+Once a beam is created, it can be stopped by the sender which is the one who deposit the tokens for streaming to receipient.
+
+```js
+public shared ({ caller }) func stopBeam(escrowId : EscrowId) : async Result<BeamStatus, ErrorCode>
+```
+
+## Restart Beam
+
+Similarlly, when a beam is stopped, it can only be restarted by the sender.
+
+```js
+public shared ({ caller }) func restartBeam(escrowId : EscrowId) : async Result<BeamStatus, ErrorCode>
+```

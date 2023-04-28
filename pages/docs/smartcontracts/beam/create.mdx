@@ -1,0 +1,12 @@
+# Create Beam
+
+```js
+public shared ({ caller }) func createBeam(escrowId : EscrowId, scheduledEndDate : Time, rate : Period)
+  : async Result<BeamId, ErrorCode>
+```
+
+While Beam service actor has a public func to create beam, it is restricted to BeamEscrow canister only. The reason for that is it requires EscrowId and its EscrowContract be created succcessfully first before a beam can be created.
+
+Pleaes refer to [Beam Escrow / Create Beam EscrowContract](/docs/smartcontracts/beamescrow/simplebeam) for more details.
+
+Same for `createRelationBeam`.
