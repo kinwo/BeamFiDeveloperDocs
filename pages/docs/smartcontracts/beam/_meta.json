@@ -1,4 +1,6 @@
 {
   "create": "Create Beam",
-  "streamingfreq": "Update Streaming Frequency"
+  "query": "Query Beam",
+  "update": "Update Beam Status",
+  "streaming": "Streaming Mechanism"
 }
