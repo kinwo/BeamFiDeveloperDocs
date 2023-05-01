@@ -3,5 +3,5 @@
   "localdev": "Local Envoironment",
   "icpledger": "ICP Ledger",
   "deploy": "Build & Deploy",
-  "tests": "Run Test"
+  "tests": "Verify & Test"
 }
