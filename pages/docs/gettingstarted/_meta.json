@@ -1,6 +1,7 @@
 {
   "quickstart": "Quick Start",
-  "localdev": "Local Development",
-  "localdevfrontend": "Web Frontend",
-  "tests": "Running Tests"
+  "localdev": "Local Envoironment",
+  "icpledger": "ICP Ledger",
+  "deploy": "Build & Deploy",
+  "tests": "Run Test"
 }
