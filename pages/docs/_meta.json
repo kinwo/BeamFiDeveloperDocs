@@ -7,6 +7,5 @@
   "deploy": "Deploy",
   "security": "Security",
   "monitor": "Monitoring and Metrics",
-  "future": "Future",
-  "references": "References"
+  "future": "Future"
 }
