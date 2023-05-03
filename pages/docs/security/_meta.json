@@ -1,4 +1,6 @@
 {
   "peer": "Peer Review",
-  "http": "Automated HTTPS API Testing"
+  "http": "Automated HTTPS API Penetration Testing",
+  "ssdlc": "Secure SDLC",
+  "sast": "Static Application Security Testing"
 }
