@@ -4,7 +4,7 @@
 
 BeamFi service layer follows a blockchain pattern to ensure the integrity of the data and the consistency of the state. The pattern is an enhancement of the [Checks-Effects-Interacions](https://docs.soliditylang.org/en/v0.6.11/security-considerations.html) pattern used in Ethereum Solidity with the addition of `Rollback` specific for Internet Computer blockchain. The reason is Canister code supports asynchronous calls and the state changes (effects) are immediately visible to the other caller before interaction calls are made. Treat it like atomic transaction commit before async calls were made. Therefore, the Rollback pattern is added to ensure the state is rolled back if the interaction calls fail.
 
-Also, Canister follows [Actor Model] (https://internetcomputer.org/capabilities/actor-model) which means its state can only be updated by itself through singel therad non-lock based execution through [consensus of blockchain which is about 2 secs](https://internetcomputer.org/icig.pdf). Only one update message can be processed at one time.
+Also, Canister follows [Actor Model](https://internetcomputer.org/capabilities/actor-model) which means its state can only be updated by itself through singel therad non-lock based execution through [consensus of blockchain which is about 2 secs](https://internetcomputer.org/capabilities). Only one update message can be processed at one time.
 
 ## BeamEscrow - creatorClaimByPrincipal
 
