@@ -1,16 +1,16 @@
 # Setup Continuous Integration / Continuous Delivery pipeline
 
-It is recommended to use a CI/CD pipeline to build and deploy your own BeamFi Vault. The following steps describe how to setup a pipeline using [Github Action](https://github.com/BeamFi/BeamFiProtocol/actions).
+It is recommended to use a CI/CD pipeline to build and deploy your own BeamFi Vault. The following steps describe how to set up a pipeline using [GitHub Action](https://github.com/BeamFi/BeamFiProtocol/actions).
 
-## Setup Github Action
+## Setup GitHub Action
 
-BeamFi Protocol Git repository comes with Github Workflow yml files which you can use to setup your CI/CD pipeline.
+BeamFi Protocol Git repository comes with GitHub Workflow `yml` files which you can use to set up your CI/CD pipeline.
 
-For example, to deploy to production IC mainnet.
+For example, to deploy to the production IC mainnet.
 
 Use [.github/workflows/prod.yml](https://github.com/BeamFi/BeamFiProtocol/blob/main/.github/workflows/prod.yml)
 
-It has simple workflow with two jobs, one for testing (by running 2 automated test scripts) and one for deployment.
+It has a simple workflow with two jobs, one for testing (by running 2 automated test scripts) and one for deployment.
 
 ```
 test -> deploy
@@ -22,7 +22,7 @@ You can also configure it to run in every commit / push.
 import { Callout } from "nextra-theme-docs"
 
 <Callout type="warning" emoji="⚠️">
-  Note that this workflow assumes you have follow [`Deploy your own BeamFi
+  Note that this workflow assumes you have followed [`Deploy your own BeamFi
   Vault`](/docs/deploy/deployic) to create and deploy your own BeamFi Vault
   canisters to IC mainnet already.
 </Callout>
@@ -114,17 +114,17 @@ jobs:
 
 ## CI / CD scripts
 
-As you can see from the workflow yml file, it uses several scripts to setup and deploy including:
+As you can see from the workflow `yml` file, it uses several scripts to setup and deploy including:
 
-| Script                              | Description                                              |
-| :---------------------------------- | :------------------------------------------------------- |
-| ./scripts/configure-local-escrow.sh | Configure local Beam Escrow canisters for running tests  |
-| ./scripts/update-env.sh             | Update Env.mo using environment variables                |
-| ./scripts/update-env.sh             | Update Env.mo using environment variables                |
-| ./scripts/deploy-local-ledger.sh    | Deploy a local ICP Ledger for running tests              |
-| ./scripts/setup-prod.sh             | Setup canisters for production deployment                |
-| ./scripts/add-ic-identity.sh        | Create DFX identity and walletsfor production deployment |
-| ./scripts/deploy-canisters.sh       | Deploy Canisters to IC mainnet                           |
+| Script                              | Description                                               |
+| :---------------------------------- | :-------------------------------------------------------- |
+| ./scripts/configure-local-escrow.sh | Configure local Beam Escrow canisters for running tests   |
+| ./scripts/update-env.sh             | Update Env.mo using environment variables                 |
+| ./scripts/update-env.sh             | Update Env.mo using environment variables                 |
+| ./scripts/deploy-local-ledger.sh    | Deploy a local ICP Ledger for running tests               |
+| ./scripts/setup-prod.sh             | Setup canisters for production deployment                 |
+| ./scripts/add-ic-identity.sh        | Create DFX identity and wallets for production deployment |
+| ./scripts/deploy-canisters.sh       | Deploy Canisters to IC mainnet                            |
 
 ## Automated Test Scripts
 
@@ -133,9 +133,9 @@ As you can see from the workflow yml file, it uses several scripts to setup and 
 | ./backend/test/test-claim-reentrancy.sh | Test Beam Escrow claim tokens reentrancy vulnerability |
 | ./backend/test/test-restart-beam.sh     | Test Beam stop and restart                             |
 
-### Setup Github Actions secrets
+### Setup GitHub Actions secrets
 
-Before running the workflow, you need to setup Github Secrets for the following environment variables.
+Before running the workflow, you need to set up GitHub Secrets for the following environment variables.
 
 | Environment Variable           | Description                                                                              |
 | :----------------------------- | :--------------------------------------------------------------------------------------- |
@@ -149,14 +149,14 @@ Before running the workflow, you need to setup Github Secrets for the following 
 | BITCOIN_NETWORK_PROD           | Bitcoin network used for testing. Simply use `Regtest`.                                  |
 | ZOOM_SECRET_TOKEN              | Zoom Developer Account SDK secret token. Leave it empty.                                 |
 
-**Retreive your DFX identity for DFX_IDENTITY_PROD**
+**Retrieve your DFX identity for DFX_IDENTITY_PROD**
 Assuming you use `icprod` identity, run:
 
 ```awk
 awk 'NF {sub(/\r/, ""); printf "%s\\r\\n",$0;}' ~/.config/dfx/identity/icprod/identity.pem
 ```
 
-Put the output in Github Actions secretst DFX_IDENTITY_PROD.
+Put the output in GitHub Actions secrets DFX_IDENTITY_PROD.
 
 **Retreive your DFX Wallet for DFX_WALLETS_PROD**
 
@@ -164,7 +164,7 @@ Put the output in Github Actions secretst DFX_IDENTITY_PROD.
 cat ~/.config/dfx/identity/icprod/wallets.json
 ```
 
-Get the output and replace identity name to "default".
+Get the output and replace the identity name with "default".
 
 E.g. if the identity name is icprod, change icprod to default in the JSON.
 
@@ -192,13 +192,13 @@ Change to:
 }
 ```
 
-Put the output in Github Actions secrets DFX_WALLETS_PROD.
+Put the output in GitHub Actions secrets DFX_WALLETS_PROD.
 
 ## Run the workflow
 
-Now you have everything ready, run the workflow action manually from your Github repo Action page.
-It looks like [BeamFi Main Vault - Github Actions](https://github.com/BeamFi/BeamFiProtocol/actions/workflows/prod.yml).
+Now you have everything ready, run the workflow action manually from your GitHub repo Action page.
+It looks like [BeamFi Main Vault - GitHub Actions](https://github.com/BeamFi/BeamFiProtocol/actions/workflows/prod.yml).
 
 It will take about 5 minutes to complete the workflow.
 
-![BeamFi Production Workflow Github Action](/BeamFiProdGithubAction.png)
+![BeamFi Production Workflow GitHub Action](/BeamFiProdGithubAction.png)

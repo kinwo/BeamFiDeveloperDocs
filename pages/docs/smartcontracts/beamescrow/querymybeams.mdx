@@ -1,12 +1,12 @@
 # Query list of BeamEscrows owned by the caller
 
-After creating BeamEscrow EscrowContract, either the sender or the recipient can lookup the BeamEscrowContracts owned by them.
+After creating BeamEscrow EscrowContract, either the sender or the recipient can look up the BeamEscrowContracts owned by them.
 
 ```js
 public query ({ caller }) func queryMyBeams() : async [BeamEscrowContract]
 ```
 
-Run the following in command line as sender identity princiapl:
+Run the following in the command line as the sender identity principal:
 
 ```bash
 dfx canister call beamescrow queryMyBeams
@@ -38,8 +38,8 @@ It will return a list of BeamEscrowContracts owned by the caller in vector recor
 import { Callout } from "nextra-theme-docs"
 
 <Callout type="warning" emoji="⚠️">
-  Note that althought this method is public, it will only return
-  BeamEscrowContracts owned by the caller not others.
+  Note that although this method is public, it will only return
+  BeamEscrowContracts owned by the caller, not the others.
 </Callout>
 
 If you switch to recipient identity and run the same command, it should return the same BeamEscrowContracts.
