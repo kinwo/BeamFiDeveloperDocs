@@ -1,6 +1,6 @@
-# Claim tokens as recipient
+# Claim tokens as a recipient
 
-To claim tokens as recipient, you need to call the `creatorClaimByPrincipal` function on the BeamEscrow service canister using the recipient's identity principal and the Escrow ID you get from createBeamEscrow or queryMyBeams.
+To claim tokens as a recipient, you need to call the `creatorClaimByPrincipal` function on the BeamEscrow service canister using the recipient's identity principal and the Escrow ID you get from createBeamEscrow or queryMyBeams.
 
 ```js
 public shared ({ caller }) func creatorClaimByPrincipal(
@@ -16,7 +16,7 @@ Switch to the recipient1 identity in dfx:
 dfx identity use recipient1
 ```
 
-Run the following in command line to claim tokens:
+Run the following in the command line to claim tokens:
 
 ```bash
 dfx canister call beamescrow creatorClaimByPrincipal "(0, variant { icp }, principal \"om674-h2bcd-bhoxu-2deg5-lqfv5-w7kea-oqsa2-rhtqu-o5jih-5xfc7-qae\")"
@@ -28,6 +28,6 @@ Check your ICP balance:
 dfx ledger balance --ledger-canister-id $(dfx canister id ledger)
 ```
 
-It should return an arbitary number of ICP not 10 ICP because the ICP tokens is still being streamed to the recipient1 identity.
+It should return an arbitrary number of ICP, not 10 ICP because the ICP tokens are still being streamed to the recipient1 identity.
 
 To check the streaming status of the recipient1 identity, use [Beam queryBeamByEscrowIds](/docs/smartcontracts/beam/query).
